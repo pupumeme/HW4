@@ -43,7 +43,7 @@ def news_api():
     w = int(w)
 
     if n > len(maga_item):
-        data["error"].append("找到的文章數只有{}篇,比目標{}偏少".format(len(maga_item), n))
+        data["error"].append("找到的文章數只有{}篇,比目標{}篇少".format(len(maga_item), n))
 
     i = 0
     for item in maga_item:
