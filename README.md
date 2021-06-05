@@ -15,3 +15,7 @@ http://13.209.88.233:8888/news_api?q=%E6%96%B0%E5%9E%A3%E7%B5%90%E8%A1%A3,%E7%B5
 
 #### 如果文章太少也會給error
 ![image](https://github.com/pupumeme/HW4/blob/main/4.JPG)
+
+#### 空字串
+![image](https://github.com/pupumeme/HW4/blob/main/.JPG)
+
