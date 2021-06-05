@@ -69,4 +69,4 @@ def news_api():
     return data
 
 
-app.run(debug=True)
+app.run(debug=True,port=8888,host="0.0.0.0")
