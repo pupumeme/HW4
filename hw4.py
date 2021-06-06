@@ -24,7 +24,6 @@ def news_api():
             "w": w
         },
         "content": {},
-        "error": []
     }
 
     res = rq.get("https://tw.news.yahoo.com/search?p={}&fr=news".format(q))
@@ -33,17 +32,17 @@ def news_api():
     maga_item = container.find_all("li", {"class": "StreamMegaItem"})
 
     if not n.isdigit():
-        data["error"].append("n不是正整數")
+        data["error"] = "n不是正整數"
         return data
     if not w.isdigit():
-        data["error"].append("w不是正整數")
+        data["error"] = "w不是正整數"
         return data
 
     n = int(n)
     w = int(w)
 
     if n > len(maga_item):
-        data["error"].append("找到的文章數只有{}篇,比目標{}篇少".format(len(maga_item), n))
+        data["error"] = "找到的文章數只有{}篇,比目標{}篇少".format(len(maga_item), n)
 
     i = 0
     for item in maga_item:
